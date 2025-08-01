@@ -10,12 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/lucide-preact@latest"></script>
     <style>
         @import url('https://rsms.me/inter/inter.css');
-        html { font-family: 'Inter', sans-serif; }
+        html { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         body { margin: 0; padding: 0; box-sizing: border-box; }
         * { box-sizing: border-box; }
-        .prose ul li {
-          margin-bottom: 0.5rem;
-        }
+
         /* Custom styles to hide sections by default */
         .page-content {
             display: none;
@@ -23,6 +21,23 @@
         /* Style for active page */
         #home-page {
             display: block;
+        }
+        /* Hero Section with background and overlay */
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1542838139-26960d7c762c?q=80&w=2942&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        /* General content styling for readability */
+        .prose ul li {
+          margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -33,7 +48,6 @@
         <div class="container mx-auto flex justify-between items-center px-4 md:px-6 lg:px-8">
             <!-- Logo and brand name -->
             <div class="flex items-center space-x-2">
-                <!-- Replaced Lucide icon with your custom logo -->
                 <img src="http://googleusercontent.com/file_content/1" alt="DAART-CHAS Group Logo" class="w-10 h-10">
                 <a href="#home" class="text-2xl font-bold text-gray-800" onclick="navigateTo('home')">DAART-CHAS</a>
             </div>
@@ -67,37 +81,38 @@
     </nav>
     
     <!-- Main content area -->
-    <main class="flex-grow pt-24 md:pt-28">
+    <main class="flex-grow">
         <!-- Home Page Content -->
         <div id="home-page" class="page-content">
-            <header class="py-20 text-center">
+            <!-- Hero Section -->
+            <header class="hero-section">
                 <div class="container mx-auto px-4 md:px-6 lg:px-8">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">DAART - CHAS INTEGRATED GROUP</h1>
-                    <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4 leading-tight tracking-wide animate-fade-in-down">DAART-CHAS INTEGRATED GROUP</h1>
+                    <p class="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto animate-fade-in-up">
                         IS THE HOLDING COMPANY for the diversified companies/subsidiaries under the umbrella of DAART-CHAS GROUP.
                     </p>
                 </div>
             </header>
     
-            <section id="about" class="py-16 px-4 md:px-6 lg:px-8">
+            <section id="about" class="py-20 px-4 md:px-6 lg:px-8 bg-white">
                 <div class="container mx-auto">
                     <div class="text-center mb-12">
                         <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">About Us</h2>
-                        <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-                            <div class="p-6 bg-white rounded-xl shadow-lg w-full md:w-1/2">
-                                <div class="flex items-center justify-center mb-4">
-                                    <i data-lucide="target" class="w-10 h-10 text-indigo-600"></i>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                            <div class="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                                <div class="flex items-center justify-center mb-4 text-indigo-600">
+                                    <i data-lucide="target" class="w-12 h-12"></i>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">OUR MISSION</h3>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">OUR MISSION</h3>
                                 <p class="text-gray-600">
                                     To provide very innovative services in all the various areas of businesses we run. To provide cutting edge services, at very cost effective Prices.
                                 </p>
                             </div>
-                            <div class="p-6 bg-white rounded-xl shadow-lg w-full md:w-1/2">
-                                <div class="flex items-center justify-center mb-4">
-                                    <i data-lucide="eye" class="w-10 h-10 text-indigo-600"></i>
+                            <div class="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                                <div class="flex items-center justify-center mb-4 text-indigo-600">
+                                    <i data-lucide="eye" class="w-12 h-12"></i>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">OUR VISION</h3>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">OUR VISION</h3>
                                 <p class="text-gray-600">
                                     To be a leading brand in the core areas of our various businesses.
                                 </p>
@@ -107,7 +122,7 @@
                 </div>
             </section>
     
-            <section id="companies" class="py-16 bg-gray-100 px-4 md:px-6 lg:px-8">
+            <section id="companies" class="py-20 bg-gray-100 px-4 md:px-6 lg:px-8">
                 <div class="container mx-auto text-center">
                     <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">Our Companies</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -149,7 +164,7 @@
         </div>
     
         <!-- DAART-CHAS MEDIA Page -->
-        <div id="media-page" class="page-content min-h-screen">
+        <div id="media-page" class="page-content min-h-screen pt-28">
             <header class="py-16 text-center bg-gray-100">
                 <h1 class="text-4xl font-bold text-gray-900">DAART-CHAS MEDIA</h1>
             </header>
@@ -169,7 +184,7 @@
         </div>
     
         <!-- DAART-CHAS FOOD Page -->
-        <div id="food-page" class="page-content min-h-screen">
+        <div id="food-page" class="page-content min-h-screen pt-28">
             <header class="py-16 text-center bg-gray-100">
                 <h1 class="text-4xl font-bold text-gray-900">DAART-CHAS FOODS, HOTELS & HOME MANAGEMENT</h1>
             </header>
@@ -203,7 +218,7 @@
         </div>
     
         <!-- DAART-CHAS FURNITURE Page -->
-        <div id="furniture-page" class="page-content min-h-screen">
+        <div id="furniture-page" class="page-content min-h-screen pt-28">
             <header class="py-16 text-center bg-gray-100">
                 <h1 class="text-4xl font-bold text-gray-900">DAART-CHAS FURNITURE, INTERIOR AND FINISHINGS</h1>
             </header>
@@ -220,7 +235,7 @@
         </div>
     
         <!-- DAART-CHAS CLOTHES Page -->
-        <div id="clothes-page" class="page-content min-h-screen">
+        <div id="clothes-page" class="page-content min-h-screen pt-28">
             <header class="py-16 text-center bg-gray-100">
                 <h1 class="text-4xl font-bold text-gray-900">DAART-CHAS CLOTHES</h1>
             </header>
