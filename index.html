@@ -35,16 +35,13 @@
             color: white;
             position: relative;
         }
-        /* Styling for the buttons in the "Our Companies" section */
+        /* Base styling for all company buttons */
         .company-button {
             transition: all 0.3s ease-in-out;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6); /* Gradient background */
-            color: white;
         }
         .company-button:hover {
             transform: translateY(-5px) scale(1.05); /* Lift and scale on hover */
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add a more pronounced shadow */
-            background: linear-gradient(45deg, #4f46e5, #7c3aed); /* Darker gradient on hover */
         }
         /* Styling for the circular icons inside the buttons */
         .company-button .icon-container {
@@ -148,7 +145,8 @@
                 <div class="container mx-auto text-center">
                     <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">Our Companies</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-                        <button class="group p-8 rounded-xl shadow-lg company-button focus:outline-none focus:ring-4 focus:ring-red-500 focus:ring-opacity-50" onclick="navigateTo('media')">
+                        <!-- DAART-CHAS MEDIA - Unique Colorful Gradient -->
+                        <button class="group p-8 rounded-xl shadow-lg company-button bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50" onclick="navigateTo('media')">
                             <div class="flex flex-col items-center">
                                 <div class="flex items-center justify-center w-20 h-20 rounded-full mb-6 icon-container">
                                     <i data-lucide="code" class="w-10 h-10 text-white"></i>
@@ -156,7 +154,8 @@
                                 <h3 class="text-xl font-bold text-white mb-2 transition duration-300">DAART-CHAS MEDIA</h3>
                             </div>
                         </button>
-                        <button class="group p-8 rounded-xl shadow-lg company-button focus:outline-none focus:ring-4 focus:ring-red-500 focus:ring-opacity-50" onclick="navigateTo('food')">
+                        <!-- DAART-CHAS FOODS - Unique Colorful Gradient -->
+                        <button class="group p-8 rounded-xl shadow-lg company-button bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-500 hover:to-red-600 focus:outline-none focus:ring-4 focus:ring-orange-500 focus:ring-opacity-50" onclick="navigateTo('food')">
                             <div class="flex flex-col items-center">
                                 <div class="flex items-center justify-center w-20 h-20 rounded-full mb-6 icon-container">
                                     <i data-lucide="utensils" class="w-10 h-10 text-white"></i>
@@ -164,7 +163,8 @@
                                 <h3 class="text-xl font-bold text-white mb-2 transition duration-300">DAART-CHAS FOODS, HOTELS & HOME MANAGEMENT</h3>
                             </div>
                         </button>
-                        <button class="group p-8 rounded-xl shadow-lg company-button focus:outline-none focus:ring-4 focus:ring-red-500 focus:ring-opacity-50" onclick="navigateTo('furniture')">
+                        <!-- DAART-CHAS FURNITURE - Unique Colorful Gradient -->
+                        <button class="group p-8 rounded-xl shadow-lg company-button bg-gradient-to-r from-green-500 to-yellow-600 hover:from-green-600 hover:to-yellow-700 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50" onclick="navigateTo('furniture')">
                             <div class="flex flex-col items-center">
                                 <div class="flex items-center justify-center w-20 h-20 rounded-full mb-6 icon-container">
                                     <i data-lucide="sofa" class="w-10 h-10 text-white"></i>
@@ -172,7 +172,8 @@
                                 <h3 class="text-xl font-bold text-white mb-2 transition duration-300">DAART-CHAS FURNITURE, INTERIOR AND FINISHINGS</h3>
                             </div>
                         </button>
-                        <button class="group p-8 rounded-xl shadow-lg company-button focus:outline-none focus:ring-4 focus:ring-red-500 focus:ring-opacity-50" onclick="navigateTo('clothes')">
+                        <!-- DAART-CHAS CLOTHES - Unique Colorful Gradient -->
+                        <button class="group p-8 rounded-xl shadow-lg company-button bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 focus:outline-none focus:ring-4 focus:ring-pink-500 focus:ring-opacity-50" onclick="navigateTo('clothes')">
                             <div class="flex flex-col items-center">
                                 <div class="flex items-center justify-center w-20 h-20 rounded-full mb-6 icon-container">
                                     <i data-lucide="shirt" class="w-10 h-10 text-white"></i>
@@ -180,7 +181,8 @@
                                 <h3 class="text-xl font-bold text-white mb-2 transition duration-300">DAART-CHAS CLOTHES</h3>
                             </div>
                         </button>
-                        <button class="group p-8 rounded-xl shadow-lg company-button focus:outline-none focus:ring-4 focus:ring-red-500 focus:ring-opacity-50" onclick="navigateTo('solar')">
+                        <!-- DAART-CHAS SOLAR ENERGY - Unique Colorful Gradient -->
+                        <button class="group p-8 rounded-xl shadow-lg company-button bg-gradient-to-r from-yellow-400 to-green-500 hover:from-yellow-500 hover:to-green-600 focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50" onclick="navigateTo('solar')">
                             <div class="flex flex-col items-center">
                                 <div class="flex items-center justify-center w-20 h-20 rounded-full mb-6 icon-container">
                                     <i data-lucide="zap" class="w-10 h-10 text-white"></i>
